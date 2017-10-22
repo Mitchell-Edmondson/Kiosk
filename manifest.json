@@ -10,5 +10,5 @@
 		}
 	},
 
-	"icon": { "128": "calculator-128.png"}
+	"icons": { "128": "calculator-128.png"}
 }
