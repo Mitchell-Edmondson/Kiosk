@@ -4,9 +4,17 @@
   "name": "ChatBot",
   "description": "This is a chatbot prototype to fill in legal forms",
   "version": "1.0",
-
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icon": { "19": "temp.png"}
+}
+/*
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
-  }
+}
+*/
 }
