@@ -11,10 +11,6 @@
 		}
 	},
 
-<<<<<<< HEAD
+
 	"icons": { "128": "icons/calculator-128.png"}
 }
-=======
-	"icons": { "128": "calculator-128.png"}
-}
->>>>>>> 92c584273929a07e029fd2df555675dd3c6ff59e
