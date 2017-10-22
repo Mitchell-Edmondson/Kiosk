@@ -9,5 +9,5 @@
 			"scripts": ["background.js"]
 		}
 	},
-	"icon": { "19": "temp.png"}
+	"calculator-128": { "128": "calculator-128.png"}
 }
