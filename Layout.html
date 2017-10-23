@@ -2,13 +2,19 @@
 <html>
 	<head>
 		<title> DivorceKiosk </title>	
+
+
+	<script src="popup.js"></script>	
+
 	</head>
 	<body>
-		<div id="firstDiv"> Nothing to see here... </div>
-   	<div>Hello, world!</div>
-		<button type="button" onclick='document.getElementById("firstDiv").innerHTML = "Why are you still looking?"'>
-		Click Me
-		</button>
+		<label for="message">Enter your message  </label> <br />
+		<input id="source" type="textbox" name="text" required="required" />  <br />
+		
+	<button>Click me</button>
+		
+	<p id="result"></p>
+
 	
 	</body>
 </html>
