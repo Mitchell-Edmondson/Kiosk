@@ -14,7 +14,7 @@ function main() {
 	//questionlist is an array of questions from layout.html
 	var questionlist = document.getElementsByClassName("question");
 	//display the user's entered answer in the result textbox
-    document.getElementById("result").innerHTML = "You answered " + source +
+    document.getElementById("result").innerHTML = "You answered " + "'" + source + "'" +
 		" to question: "+ questionlist[count].innerHTML;
 	//increase questioncount
 	count += 1;
