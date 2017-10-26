@@ -12,11 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function main() {
+	//variable source is used to display the user's answer that they entered in the textbox
     var source = document.getElementById('source').value;
-	var questionnumber = document.getElementsByClassName("question");
+	//questionlist is an array of questions from layout.html
+	var questionlist = document.getElementsByClassName("question");
+	//display the user's entered answer in the result textbox
     document.getElementById("result").innerHTML = "You answered " + source +
-		" to question: "+ questionnumber[count].innerHTML;
+		" to question: "+ questionlist[count].innerHTML;
+	//increase questioncount
 	count += 1;
+	//change the text to follow along with the current question
+	document.getElementById("myspan").innerHTML = questionlist[count].innerHTML;
 }
 function makePrice() {
 	var price, quantity, total;
