@@ -1,11 +1,22 @@
+var count = 0;
 document.addEventListener('DOMContentLoaded', function () {
 		setter();
+	
+	
+
+		
       document.querySelector('button').addEventListener('click', main);      
       document.querySelector('button').addEventListener('click', makePrice);      
 });
+
+
+
 function main() {
     var source = document.getElementById('source').value;
-    document.getElementById("result").innerHTML = source;
+	var questionnumber = document.getElementsByClassName("question");
+    document.getElementById("result").innerHTML = "You answered " + source +
+		" to question: "+ questionnumber[count].innerHTML;
+	count += 1;
 }
 function makePrice() {
 	var price, quantity, total;
