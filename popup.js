@@ -1,10 +1,7 @@
 var count = 0;
 document.addEventListener('DOMContentLoaded', function () {
 		setter();
-	
-	
-
-		
+				
       document.querySelector('button').addEventListener('click', main);      
       document.querySelector('button').addEventListener('click', makePrice);      
 });
@@ -23,6 +20,9 @@ function main() {
 	count += 1;
 	//change the text to follow along with the current question
 	document.getElementById("myspan").innerHTML = questionlist[count].innerHTML;
+	//change the textbox to be clear again, this way the user doesn't have to delete their answer
+	//each time they have to answer a question
+	document.getElementById('source').value = "";
 }
 function makePrice() {
 	var price, quantity, total;
@@ -38,3 +38,4 @@ function setter() {
 	var bar = document.getElementById('autoSet');
 	bar.textContent = 'Should appear at startup.';
 }
+
