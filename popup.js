@@ -22,6 +22,7 @@ function main() {
 	answerlist[count].innerHTML = source;	
 	//increase questioncount
 	count += 1;
+	questionlist[count].style.display = "block";
 	//change the text to follow along with the current question
 	document.getElementById("myspan").innerHTML = questionlist[count].innerHTML;
 	//change the textbox to be clear again, this way the user doesn't have to delete their answer
