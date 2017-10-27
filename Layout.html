@@ -3,13 +3,18 @@
 	<head>
 		<title> DivorceKiosk </title>	
 
-
+	<!-- Links to external CSS stylesheet; 
+	*	  href - path to css stylesheet
+	*	  type - type of document being linked to, 
+	*	  rel - relationship between html page and file, for css file this is always 'stylesheet'
+	*	-->
+	<link href='css/Layout.css' type='text/css' rel='stylesheet' />
 	<script src="popup.js"></script>	
 	<script src="FileSaver.js"></script>
 	</head>
 	<body>
 	<p> Below is a list of questions that you will be answering </p>
-	<div STYLE=" height: 150px; width: 300px; font-size: 12px; overflow: auto;">
+	<div class='textCarrier' STYLE=" height: 150px; width: 300px; font-size: 12px; overflow: auto;">
 	
 	<p class = "question"> What is your first and last name?</p>
 	<p class = "answer"></p>

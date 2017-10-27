@@ -3,14 +3,22 @@ var string = '';
 document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('submitButton').addEventListener('click', main);      
     	document.getElementById('a').addEventListener('click', download); 
+		document.getElementById('source').addEventListener('keypress', x);
 });
 
-
+function x(e) {
+	//'.which' -
+	//'.keyCode' -
+	var key = e.which || e.keyCode;
+	// 13 is code for enter
+	if(key == 13)
+		main();
+}
 
 function main() {
 	//variable source is used to display the user's answer that they entered in the textbox
    var source = document.getElementById('source').value;
-	string = string + source; 
+	string = string + source + '\r\n'; 
 	//questionlist is an array of questions from layout.html
 	var questionlist = document.getElementsByClassName("question");
 	//answerlist is an array of empty paragraphs from layout.html
@@ -30,6 +38,8 @@ function main() {
 	//document.getElementById('finalAnswer').addEventListener('onchange', builder(answerlist));
 	document.getElementById('source').value = "";
 }
+
+
 
 
 function download() {
