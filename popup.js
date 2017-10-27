@@ -1,15 +1,16 @@
 var count = 0;
+var string = '';
 document.addEventListener('DOMContentLoaded', function () {
-					
-      document.querySelector('button').addEventListener('click', main);      
-     
+      document.getElementById('submitButton').addEventListener('click', main);      
+    	document.getElementById('a').addEventListener('click', download); 
 });
 
 
 
 function main() {
 	//variable source is used to display the user's answer that they entered in the textbox
-    var source = document.getElementById('source').value;
+   var source = document.getElementById('source').value;
+	string = string + source; 
 	//questionlist is an array of questions from layout.html
 	var questionlist = document.getElementsByClassName("question");
 	//answerlist is an array of empty paragraphs from layout.html
@@ -25,8 +26,14 @@ function main() {
 	document.getElementById("myspan").innerHTML = questionlist[count].innerHTML;
 	//change the textbox to be clear again, this way the user doesn't have to delete their answer
 	//each time they have to answer a question
+	//document.getElementById('finalAnswer').addEventListener('onchange', builder(answerlist));
 	document.getElementById('source').value = "";
-	
 }
 
 
+function download() {
+	var a = document.getElementById('a');		
+	var file = new Blob([string], {type: 'text/plain'});
+	a.href = URL.createObjectURL(file);
+	a.download = 'filename.txt';
+}					
